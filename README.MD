@@ -31,3 +31,4 @@ Provide logging and readable test reports for this exercise.
 Links:
 https://spring.io/guides/gs/consuming-rest/
 https://spring.io/guides/tutorials/rest/
+https://www.baeldung.com/spring-5-webclient

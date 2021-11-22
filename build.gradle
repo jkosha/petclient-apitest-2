@@ -10,9 +10,7 @@ group = 'com.nikitakoselev'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
-repositories {
-    mavenCentral()
-}
+
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
@@ -24,9 +22,15 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.projectreactor:reactor-test'
 
-    testImplementation 'io.cucumber:cucumber-java8:7.0.0'
-    testImplementation 'io.cucumber:cucumber-junit:7.0.0'
 
+
+
+    testImplementation 'io.cucumber:cucumber-java:6.11.0'
+    testImplementation 'io.cucumber:cucumber-junit:6.11.0'
+}
+
+repositories {
+    mavenCentral()
 }
 
 test {
@@ -45,7 +49,7 @@ task cucumber() {
         javaexec {
             main = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            args = ['--plugin', 'pretty', '--glue', 'gradle.cucumber', 'src/test/resources']
+            args = ['--plugin', 'pretty', '--glue', 'com.nikitakoselev.petclient', 'src/test/resources']
         }
     }
 }

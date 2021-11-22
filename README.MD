@@ -28,7 +28,7 @@ controlled by a flag. (This is optional for this exercise)
 Provide logging and readable test reports for this exercise.
 
 
-Links:
+Links used to solve the challenge:
 https://spring.io/guides/gs/reactive-rest-service/
 https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-reactive-api
 https://spring.io/guides/gs/consuming-rest/
@@ -37,3 +37,6 @@ https://www.baeldung.com/spring-5-webclient
 https://www.baeldung.com/webflux-webclient-parameters
 https://cucumber.io/docs/tools/java/#gradle
 https://www.javacodegeeks.com/2019/09/spring-boot-testing-junit-5.html
+https://docs.spring.io/spring-security/site/docs/5.2.0.RELEASE/reference/html/test-webflux.html
+https://spring.io/guides/gs/testing-web/
+https://www.baeldung.com/spring-resttemplate-json-list

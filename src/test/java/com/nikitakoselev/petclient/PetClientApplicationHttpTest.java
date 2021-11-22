@@ -34,6 +34,5 @@ class PetClientApplicationHttpTest {
                 .getBody();
 
         Assertions.assertTrue(pets.size() > 0);
-        log.debug(pets.toString());
     }
 }

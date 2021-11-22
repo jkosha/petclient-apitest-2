@@ -40,3 +40,4 @@ https://www.javacodegeeks.com/2019/09/spring-boot-testing-junit-5.html
 https://docs.spring.io/spring-security/site/docs/5.2.0.RELEASE/reference/html/test-webflux.html
 https://spring.io/guides/gs/testing-web/
 https://www.baeldung.com/spring-resttemplate-json-list
+https://www.youtube.com/watch?v=kGK9Hf8cnBw

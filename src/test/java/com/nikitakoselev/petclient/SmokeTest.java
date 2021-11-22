@@ -11,7 +11,7 @@ import org.springframework.boot.web.server.LocalServerPort;
 import static org.springframework.boot.test.context.SpringBootTest.*;
 
 @SpringBootTest
-class PetClientApplicationTests {
+class SmokeTest {
 
     @Autowired
     PetClientApplication petClientApplication;

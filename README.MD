@@ -29,6 +29,11 @@ Provide logging and readable test reports for this exercise.
 
 
 Links:
+https://spring.io/guides/gs/reactive-rest-service/
+https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-reactive-api
 https://spring.io/guides/gs/consuming-rest/
 https://spring.io/guides/tutorials/rest/
 https://www.baeldung.com/spring-5-webclient
+https://www.baeldung.com/webflux-webclient-parameters
+https://cucumber.io/docs/tools/java/#gradle
+https://www.javacodegeeks.com/2019/09/spring-boot-testing-junit-5.html

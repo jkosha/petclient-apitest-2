@@ -4,6 +4,8 @@ plugins {
     id 'java'
 }
 
+
+
 group = 'com.nikitakoselev'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
@@ -17,8 +19,32 @@ dependencies {
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+
+
+    testImplementation 'io.cucumber:cucumber-java8:7.0.0'
+    testImplementation 'io.cucumber:cucumber-junit:7.0.0'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'io.projectreactor:reactor-test'
 }
 
 test {
     useJUnitPlatform()
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+task cucumber() {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'pretty', '--glue', 'gradle.cucumber', 'src/test/resources']
+        }
+    }
 }

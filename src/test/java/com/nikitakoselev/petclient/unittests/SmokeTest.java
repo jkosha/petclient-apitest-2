@@ -1,6 +1,7 @@
-package com.nikitakoselev.petclient;
+package com.nikitakoselev.petclient.unittests;
 
 
+import com.nikitakoselev.petclient.PetClientApplication;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

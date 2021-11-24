@@ -13,11 +13,9 @@ import reactor.core.publisher.Flux;
 public class PetController {
     private static final Logger log = LoggerFactory.getLogger(PetController.class);
 
-    private final PetService petService;
+    @Autowired
+    private PetService petService;
 
-    public PetController(PetService petService) {
-        this.petService = petService;
-    }
 
 
     @GetMapping("getPetsByStatus")

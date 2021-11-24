@@ -41,3 +41,15 @@ https://docs.spring.io/spring-security/site/docs/5.2.0.RELEASE/reference/html/te
 https://spring.io/guides/gs/testing-web/
 https://www.baeldung.com/spring-resttemplate-json-list
 https://www.youtube.com/watch?v=kGK9Hf8cnBw
+https://thepracticaldeveloper.com/cucumber-tests-spring-boot-dependency-injection/
+https://josdem.io/techtalk/spring/spring_boot_cucumber/
+https://josdem.io/techtalk/spring/spring_boot_cucumber/#Gradle
+https://github.com/cucumber/cucumber-jvm/blob/main/junit-platform-engine/README.md
+https://junit.org/junit5/docs/current/user-guide/#running-tests-build-gradle
+https://docs.gradle.org/current/userguide/java_plugin.html#sec:java_test
+https://junit.org/junit5/docs/current/user-guide/#migrating-from-junit4-running
+
+
+My git projects for tryouts and fork pull requests:
+https://github.com/jkosha/spring-boot-cucumber 
+https://github.com/jkosha/petclient-apitest

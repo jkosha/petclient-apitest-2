@@ -3,6 +3,7 @@ package com.nikitakoselev.petclient;
 import com.nikitakoselev.petclient.model.Pet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
@@ -13,9 +14,13 @@ import java.io.IOException;
 public class PetService {
     Logger log = LoggerFactory.getLogger(PetService.class);
 
+    @Value("${baseUrl}")
+    String baseUrl;
+
     public Flux<Pet> getPetsByStatus(String status) {
+
         Flux<Pet> pets = WebClient.builder()
-                .baseUrl("https://petstore.swagger.io")
+                .baseUrl(baseUrl)
                 .build()
                 .get()
                 .uri(uriBuilder -> uriBuilder

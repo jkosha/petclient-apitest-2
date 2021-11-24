@@ -1,25 +1,17 @@
-package com.nikitakoselev.petclient;
+package com.nikitakoselev.petclient.unittests;
 
+import com.nikitakoselev.petclient.PetController;
+import com.nikitakoselev.petclient.PetService;
 import com.nikitakoselev.petclient.model.Category;
 import com.nikitakoselev.petclient.model.Pet;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
-import org.mockito.stubbing.Answer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.reactive.server.WebTestClient;
-import org.springframework.web.reactive.function.BodyInserters;
-import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
-
-import java.io.IOException;
-
-import static org.mockito.Mockito.when;
 
 @WebFluxTest(PetController.class)
 public class PetControllerTest {
@@ -52,8 +44,5 @@ public class PetControllerTest {
                 .jsonPath("$").isArray()
                 .jsonPath("$[0].id").isEqualTo(1)
                 .jsonPath("$[0].status" ).isEqualTo("available");
-
-
-
     }
 }

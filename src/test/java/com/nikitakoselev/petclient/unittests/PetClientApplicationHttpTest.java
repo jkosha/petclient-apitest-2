@@ -1,8 +1,6 @@
-package com.nikitakoselev.petclient;
+package com.nikitakoselev.petclient.unittests;
 
 
-import com.nikitakoselev.petclient.model.Pet;
-import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -11,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
-import reactor.core.publisher.Flux;
 
 import java.util.List;
 
@@ -29,7 +26,7 @@ class PetClientApplicationHttpTest {
 
     @Test
     void somePetsShouldBeReturned() {
-        List<Pet> pets = restTemplate
+        List pets = restTemplate
                 .getForEntity("http://localhost:" + port + "/getPetsByStatus?status=available", List.class)
                 .getBody();
 
